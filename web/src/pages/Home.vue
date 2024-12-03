@@ -385,6 +385,16 @@ onBeforeUnmount(() => {
     gsiMap.remove()
   }
 })
+
+const roadWidthName = (roadWidthType: RoadWidthType) => {
+  if (roadWidthType === 'TWO_LANE') {
+    return '2車線'
+  } else if (roadWidthType === 'ONE_LANE_SPACIOUS') {
+    return '1.5車線'
+  } else if (roadWidthType === 'ONE_LANE') {
+    return '1車線'
+  }
+}
 </script>
 
 <template>
@@ -500,7 +510,7 @@ onBeforeUnmount(() => {
               {{ point.label }}
             </td>
             <td>{{ point.latitude }}, {{ point.longitude }}</td>
-            <td>{{ point.roadWidthType }}</td>
+            <td>{{ roadWidthName(point.roadWidthType) }}</td>
           </tr>
         </tbody>
       </table>
