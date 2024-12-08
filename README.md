@@ -17,3 +17,6 @@ npm run dev
 ## sample video
 
 https://www.youtube.com/watch?v=9yBJeybOmWg
+
+## 詳細
+https://zenn.dev/homing/articles/4127b8580bbfcf
